@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páginas de Entretenimiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+        }
+        .search-container {
+            margin: 20px;
+        }
+        .search-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #1e1e1e;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            box-shadow: 2px 0 6px rgba(0, 0, 0, 0.3);
+        }
+        .sidebar h2 {
+            color: #4fc3f7;
+            text-align: center;
+        }
+        .sidebar a {
+            display: block;
+            color: #e0e0e0;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #333;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+        .header {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .card {
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+        }
+        .card img {
+            border-radius: 8px;
+            max-width: 150px;
+            margin-right: 20px;
+            transition: transform 0.3s;
+        }
+        .card img:hover {
+            transform: scale(1.05);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #4fc3f7;
+        }
+        .card p {
+            color: #b0bec5;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #4fc3f7;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .card a:hover {
+            color: #82b1ff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Categorías</h2>
+        <a href="#streaming">Streaming</a>
+        <a href="#música">Música</a>
+        <a href="#video">Video</a>
+        <a href="#juegos">Juegos</a>
+        <a href="#noticias">Noticias</a>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Entretenimiento Al Límite</h1>
+        </div>
+
+        <!-- Reproducción de música de fondo -->
+        <audio autoplay loop>
+            <source src="Undertale OST 023 - Shop - Misaki (youtube).mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Barra de búsqueda -->
+        <div class="search-container">
+            <input type="search" id="searchBox" class="search-box" placeholder="Buscar...">
+        </div>
+
+        <!-- Sección de contenido -->
+        <div id="content">
+            <!-- Streaming -->
+            <div id="streaming">
+                <h2>Streaming</h2>
+                <a href="https://www.netflix.com" target="_blank">
+                    <div class="card" data-title="Netflix">
+                        <img src="https://cdn.dijitalajanslar.com/2016/06/netflix-logo-tasariminda-degisiklik-yapti.png" alt="Netflix Logo">
+                        <div>
+                            <h2>Netflix</h2>
+                            <p>Netflix es una plataforma de streaming que ofrece una amplia variedad de series, películas, documentales y programas de televisión.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.hbomax.com" target="_blank">
+                    <div class="card" data-title="HBO Max">
+                        <img src="https://i.pinimg.com/736x/8b/02/00/8b020050690f955ccb306cdf51324aea.jpg" alt="HBO Max Logo">
+                        <div>
+                            <h2>HBO Max</h2>
+                            <p>HBO Max ofrece acceso a contenido de HBO y otras producciones de alta calidad, incluyendo series, películas y documentales exclusivos.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.disneyplus.com" target="_blank">
+                    <div class="card" data-title="Disney Plus">
+                        <img src="https://i.pinimg.com/originals/6c/50/6a/6c506a9e69065a3c4f57c99d264e801b.jpg" alt="Disney Plus Logo">
+                        <div>
+                            <h2>Disney+</h2>
+                            <p>Disney+ es la plataforma de streaming que incluye todas las películas y series de Disney, Pixar, Marvel, Star Wars y National Geographic.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.primevideo.com" target="_blank">
+                    <div class="card" data-title="Amazon Prime Video">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Amazon_Prime_Video_blue_logo_1.svg" alt="Amazon Prime Video Logo">
+                        <div>
+                            <h2>Amazon Prime Video</h2>
+                            <p>Prime Video es un servicio de streaming que ofrece series, películas y contenido exclusivo producido por Amazon.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Música -->
+            <div id="música">
+                <h2>Música</h2>
+                <a href="https://www.spotify.com" target="_blank">
+                    <div class="card" data-title="Spotify">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/1200px-Spotify_App_Logo.svg.png" alt="Spotify Logo">
+                        <div>
+                            <h2>Spotify</h2>
+                            <p>Spotify es un servicio de música en streaming que permite a los usuarios escuchar canciones y podcasts en línea.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.apple.com/music" target="_blank">
+                    <div class="card" data-title="Apple Music">
+                        <img src="https://i.pinimg.com/474x/bd/4a/b6/bd4ab64a7e39bb61aa3d91de8ba4bce9.jpg" alt="Apple Music Logo">
+                        <div>
+                            <h2>Apple Music</h2>
+                            <p>Apple Music es un servicio de música en streaming con acceso a una extensa biblioteca de canciones y estaciones de radio en vivo.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://music.youtube.com" target="_blank">
+                    <div class="card" data-title="YouTube Music">
+                        <img src="https://cdn3.iconfinder.com/data/icons/social-network-flat-3/100/Youtube_Music-512.png" alt="YouTube Music Logo">
+                        <div>
+                            <h2>YouTube Music</h2>
+                            <p>YouTube Music ofrece acceso a millones de canciones y videos musicales en una plataforma altamente personalizada.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://tidal.com" target="_blank">
+                    <div class="card" data-title="Tidal">
+                        <img src="https://i.pinimg.com/1200x/5c/83/1b/5c831bce6411c12726cd614432909c2e.jpg" alt="Tidal Logo">
+                        <div>
+                            <h2>Tidal</h2>
+                            <p>Tidal es una plataforma de streaming de música de alta calidad enfocada en ofrecer audio sin pérdidas y videos musicales exclusivos.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Video -->
+            <div id="video">
+                <h2>Video</h2>
+                <a href="https://www.youtube.com" target="_blank">
+                    <div class="card" data-title="YouTube">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube Logo">
+                        <div>
+                            <h2>YouTube</h2>
+                            <p>YouTube es una plataforma de video que permite a los usuarios subir, ver y compartir videos de todo tipo, desde música hasta tutoriales.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://vimeo.com" target="_blank">
+                    <div class="card" data-title="Vimeo">
+                        <img src="https://seekvectors.com/files/download/a93b655380bfd47da59e0c423a016600.jpg" alt="Vimeo Logo">
+                        <div>
+                            <h2>Vimeo</h2>
+                            <p>Vimeo es una plataforma de video centrada en creadores de contenido, que ofrece alta calidad de video para cineastas y profesionales.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.dailymotion.com" target="_blank">
+                    <div class="card" data-title="Dailymotion">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAH2sMMP6BFg81JKDVZ_z6VIaWamISyJa0OQ&s" alt="Dailymotion Logo">
+                        <div>
+                            <h2>Dailymotion</h2>
+                            <p>Dailymotion es una plataforma de video donde los usuarios pueden encontrar y compartir videos originales y contenido de diversas categorías.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Juegos -->
+            <div id="juegos">
+                <h2>Juegos</h2>
+                <a href="https://store.steampowered.com" target="_blank">
+                    <div class="card" data-title="Steam">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/1024px-Steam_icon_logo.svg.png" alt="Steam Logo">
+                        <div>
+                            <h2>Steam</h2>
+                            <p>Steam es una plataforma de videojuegos donde los usuarios pueden comprar, descargar y jugar a miles de juegos de diferentes géneros.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.epicgames.com/store" target="_blank">
+                    <div class="card" data-title="Epic Games">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/1200px-Epic_Games_logo.svg.png" alt="Epic Games Logo">
+                        <div>
+                            <h2>Epic Games</h2>
+                            <p>Epic Games Store es una plataforma de distribución de videojuegos con títulos exclusivos y grandes descuentos en juegos populares.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://store.playstation.com" target="_blank">
+                    <div class="card" data-title="PlayStation Store">
+                        <img src="https://i.pinimg.com/originals/da/6e/60/da6e60ba1824916fbf81050cfb166a4e.png" alt="PlayStation Store Logo">
+                        <div>
+                            <h2>PlayStation Store</h2>
+                            <p>PlayStation Store es la tienda digital oficial de Sony donde los usuarios pueden comprar y descargar juegos para PlayStation.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.microsoft.com/en-us/store/b/xbox" target="_blank">
+                    <div class="card" data-title="Xbox Store">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkgfJOVC1BVqlLmVlivOV0QCazc6cWaHPVwQ&s" alt="Xbox Store Logo">
+                        <div>
+                            <h2>Xbox Store</h2>
+                            <p>Xbox Store es la tienda oficial de Microsoft donde los usuarios pueden comprar juegos digitales y suscripciones para Xbox.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Noticias -->
+            <div id="noticias">
+                <h2>Noticias</h2>
+                <a href="https://www.bbc.com/news" target="_blank">
+                    <div class="card" data-title="BBC News">
+                        <img src="https://www.publimetro.com.mx/resizer/v2/LIJCUACRVNANFAMFDPIM26DTXU.jpeg?auth=6063e415d04be0b899ea3c01b61ef76d0c59f44eec78301ce116703fc6408933&width=1200&height=1200&smart=true" alt="BBC News Logo">
+                        <div>
+                            <h2>BBC News</h2>
+                            <p>BBC News es una de las principales fuentes de noticias a nivel mundial, ofreciendo cobertura de eventos globales, análisis y reportajes.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://edition.cnn.com" target="_blank">
+                    <div class="card" data-title="CNN">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgT-R52bE5nFi11FvXv3Er0ADTmXuBd3ieeQ&s" alt="CNN Logo">
+                        <div>
+                            <h2>CNN</h2>
+                            <p>CNN es una red internacional de noticias que ofrece las últimas noticias de todo el mundo, cubriendo política, tecnología, entretenimiento y más.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://elpais.com" target="_blank">
+                    <div class="card" data-title="El País">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb9avGVF9FxEbbEClN8A5zsUCk1XzZHTqGNw&s" alt="El País Logo">
+                        <div>
+                            <h2>El País</h2>
+                            <p>El País es uno de los principales periódicos en español, ofreciendo noticias y análisis sobre España, América Latina y el mundo.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.theguardian.com" target="_blank">
+                    <div class="card" data-title="The Guardian">
+                        <img src="https://kobestarr.io/wp-content/uploads/2018/01/the-guardian-logo.png" alt="The Guardian Logo">
+                        <div>
+                            <h2>The Guardian</h2>
+                            <p>The Guardian es un periódico británico que ofrece noticias globales, análisis en profundidad y contenido multimedia.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+	    <script>
+        document.getElementById('searchBox').addEventListener('keyup', function() {
+            let filter = this.value.toLowerCase();
+            let cards = document.querySelectorAll('.card');
+
+            cards.forEach(function(card) {
+                let title = card.getAttribute('data-title').toLowerCase();
+                if (title.includes(filter)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
