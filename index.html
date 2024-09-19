@@ -13,27 +13,6 @@
             color: #e0e0e0;
             display: flex;
         }
-        .search-container {
-            margin: 20px;
-        }
-        .search-box {
-            width: 100%;
-            max-width: 400px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            padding: 10px;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
         .sidebar {
             width: 250px;
             background-color: #1e1e1e;
@@ -69,6 +48,28 @@
             padding: 20px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .search-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .search-box {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
         }
         .card {
             background: #1e1e1e;
@@ -131,22 +132,20 @@
             <h1>Entretenimiento Al Límite</h1>
         </div>
 
-        <!-- Reproducción de música de fondo -->
         <audio autoplay loop>
             <source src="Undertale OST 023 - Shop - Misaki (youtube).mp3" type="audio/mpeg">
         </audio>
 
-        <!-- Barra de búsqueda -->
         <div class="search-container">
             <input type="search" id="searchBox" class="search-box" placeholder="Buscar...">
         </div>
-
+		
         <!-- Sección de contenido -->
         <div id="content">
             <!-- Streaming -->
             <div id="streaming">
                 <h2>Streaming</h2>
-                <a href="https://www.netflix.com" target="_blank">
+                <a href="Netflix.html"class="casilla">
                     <div class="card" data-title="Netflix">
                         <img src="https://cdn.dijitalajanslar.com/2016/06/netflix-logo-tasariminda-degisiklik-yapti.png" alt="Netflix Logo">
                         <div>
@@ -341,7 +340,7 @@
 
         </div>
     </div>
-	    <script>
+    <script>
         document.getElementById('searchBox').addEventListener('keyup', function() {
             let filter = this.value.toLowerCase();
             let cards = document.querySelectorAll('.card');
