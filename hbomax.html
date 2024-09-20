@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de HBOMAX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #4E1B80; /* Cambia el color a tu preferencia */
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px; /* Espacio debajo del encabezado */
+        }
+
+        .header h1 {
+            font-size: 2.5em; /* Tamaño más grande */
+            margin: 0;
+            font-weight: normal; /* Menos peso en la fuente */
+            padding: 20px; /* Espacio interno */
+            background-color: rgba(30, 30, 30, 0.9); /* Fondo semi-transparente */
+            border-radius: 10px; /* Bordes redondeados */
+            display: inline-block; /* Ajustar el ancho del fondo al texto */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para realzar */
+            color: #fff;
+        }
+
+        .card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin: 20px;
+            padding: 20px;
+            width: 90%;
+            max-width: 900px; /* Alineación con el resto */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card img {
+            max-width: 300px; /* Controlar tamaño del logo */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .plans-container {
+            background: #2a2a2a;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 900px; /* Alineación con el resto */
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .plans-container h3 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .plans {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* Tres columnas para los planes */
+            gap: 20px;
+        }
+
+        .plan {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid #0439ff;
+            text-align: left;
+        }
+
+        .plan h4 {
+            margin-top: 0;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #0439ff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2D0C5C;
+        }
+
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .plans {
+                grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+            }
+
+            .card img {
+                max-width: 100%; /* Logo se ajusta a pantalla pequeña */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <br>
+        <h1>Max</h1>
+    </div>
+
+    <audio autoplay loop>
+        <source src="Undertale OST 023 - Shop - Misaki (youtube).mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="content">
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/8b/02/00/8b020050690f955ccb306cdf51324aea.jpg" alt="HBOMAX Logo">
+            <div class="description">
+                <p>🎬 Plataforma de Streaming Premium: Con HBO Max tienes acceso a series y películas galardonadas. Desde éxitos de HBO hasta contenido de Warner Bros, DC y más. 🏆</p>
+                <p>🍿 Contenido Exclusivo: Disfruta de los mejores dramas, comedias y documentales, así como estrenos de cine en streaming. 🎥</p>
+                <p>🎥 Grandes Estrenos: Mira las últimas películas y series originales producidas exclusivamente para HBO Max. 🌟</p>
+                <p>🦸‍♂️ Superhéroes y Villanos: Contenido exclusivo de DC Comics, con todos tus héroes favoritos. 💥</p>
+                <p>👨‍👩‍👧‍👦 Para Toda la Familia: Ofrece contenido infantil y para adolescentes con opciones para todos los gustos. 🧒👨‍👩‍👧</p>
+                <p>🌍 Acceso Global: Disponible en varios países, con subtítulos y opciones de doblaje en diferentes idiomas. 🌐</p>
+                <p>🔄 Descargas Offline: Descarga tus episodios y películas favoritas para ver sin conexión. 📱💾</p>
+            </div>
+        </div>
+
+        <div class="plans-container">
+            <h3>Planes y Precios</h3>
+            <div class="plans">
+                <div class="plan">
+                    <h4>Plan Básico Con Anuncios</h4>
+                    <p>💲 Precio: $19.900/mes</p>
+                    <p>📺 Resolución: Full HD (1080p)</p>
+                    <p>📱 Acceso en 2 dispositivos a la vez</p>
+                </div>
+                <div class="plan">
+                    <h4>Plan Estándar</h4>
+                    <p>💲 Precio: $24.900/mes</p>
+                    <p>📺 Resolución: Full HD (1080p)</p>
+                    <p>📱 Acceso en 2 dispositivos a la vez</p>
+                    <p>📱 30 descargas para disfrutar offline</p>
+                </div>
+                <div class="plan">
+                    <h4>Plan Platino</h4>
+                    <p>💲 Precio: $32.900/mes</p>
+                    <p>📺 Resolución: Ultra HD (4K)</p>
+                    <p>🔊 Audio Dolby Atmos</p>
+                    <p>📱 Acceso en 4 dispositivos a la vez</p>
+                    <p>📱 100 descargas para disfrutar offline</p>
+                </div>
+            </div>
+            <button onclick="window.location.href='https://www.max.com/co/es'">Ir a HBOMAX</button>
+        </div>
+        <br>
+    </div>
+
+</body>
+
+</html>
