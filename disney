@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Disney +</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+            padding: 20px;
+            background-color: rgba(30, 30, 30, 0.9);
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+
+        .card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin: 0px;
+            padding: 20px;
+            width: 90%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            max-width: 90%;
+            text-align: auto;
+            line-height: 1.6;
+        }
+
+        .plans-container {
+            background: #2a2a2a;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 900px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .plans-container h3 {
+            margin-bottom: 20px;
+        }
+
+        .plans {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .plan {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid #0439ff;
+            text-align: left;
+        }
+
+        .plan h4 {
+            margin-top: 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #0439ff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #2D0C5C;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .logo {
+                max-width: 100%;
+            }
+
+            .description {
+                max-width: 100%;
+            }
+
+            .plans {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+	<br>
+        <h1>Disney +</h1>
+    </div>
+
+    <div id="content">
+        <div class="card">
+            <img class="logo" src="https://i.pinimg.com/originals/6c/50/6a/6c506a9e69065a3c4f57c99d264e801b.jpg" alt="Disney + Logo">
+            <div class="description">
+                <p>🌟 Plataforma de Streaming: Acceso a un vasto catálogo de contenido de Disney, Pixar, Marvel, Star Wars y National Geographic. 🎥</p>
+                <p>🍿 Películas y Series: Disfruta de clásicos animados de Disney, las últimas películas de Marvel 🦸‍♂️, y emocionantes series de Star Wars 🚀.</p>
+                <p>👨‍👩‍👧‍👦 Contenido Familiar: Ideal para toda la familia, con opciones para niños y adultos. 🧒👴</p>
+                <p>📺 Experiencia Personalizada: Crea perfiles individuales y recibe recomendaciones basadas en tus gustos. 💡</p>
+                <p>🌍 Acceso Global: Disponible en múltiples países, con subtítulos y doblajes en varios idiomas. 🌐</p>
+                <p>🔄 Descargas Offline: Mira tus películas y series favoritas sin conexión a internet. 📱💾</p>
+                <p>🎉 Actualizaciones Constantes: Nuevos lanzamientos y contenido original se añaden regularmente. 🆕</p>
+            </div>
+        </div>
+
+        <div class="plans-container">
+            <h3>Planes y Precios</h3>
+            <div class="plans">
+                <div class="plan">
+                    <h4>Plan Estándar</h4>
+                    <p>✔️ Catálogo completo de Disney+ y Star+</p>
+                    <p>✔️ Acceso a los canales lineales de ESPN y ESPN3 (Con anuncios)</p>
+                    <p>💲 Precio: $34.900/mes</p>
+                    <p>📺 Resolución: Full HD (1080p)</p>
+                    <p>📱 Acceso en 2 dispositivos a la vez</p>
+                </div>
+                <div class="plan">
+                    <h4>Plan Premium</h4>
+                    <p>✔️ Catálogo completo de Disney+ y Star+</p>
+                    <p>✔️ Acceso completo a deportes de ESPN, incluidos todos los canales en vivo (Con anuncios)</p>
+                    <p>🔊 Audio Dolby Atmos</p>
+                    <p>💲 Precio: $46.900/mes</p>
+                    <p>📺 Resolución: 4K UHD y HDR</p>
+                    <p>📱 Acceso en 4 dispositivos a la vez</p>
+                </div>
+            </div>
+            <button onclick="window.location.href='https://disneyplus.com/'">Ir a Disney +</button>
+        </div>
+		<br>
+    </div>
+
+</body>
+
+</html>
