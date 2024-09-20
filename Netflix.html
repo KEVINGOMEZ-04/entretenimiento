@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de Netflix</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #3498db; /* Cambia el color a tu preferencia */
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px; /* Espacio debajo del encabezado */
+        }
+        .header h1 {
+            font-size: 2.5em; /* Tamaño más grande */
+            margin: 0;
+            font-weight: normal; /* Menos peso en la fuente */
+            padding: 20px; /* Espacio interno */
+            background-color: rgba(30, 30, 30, 0.9); /* Fondo semi-transparente */
+            border-radius: 10px; /* Bordes redondeados */
+            display: inline-block; /* Ajustar el ancho del fondo al texto */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Sombra para realzar */
+        }
+        .card {
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            margin: 20px;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+        }
+        .plans {
+            margin-top: 20px;
+        }
+        .plan {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #e50914;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #f40612;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+	<br>
+        <h1>  Netflix  </h1>
+    </div>
+	
+    <audio autoplay loop>
+        <source src="Undertale OST 023 - Shop - Misaki (youtube).mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="content">
+        <div class="card">
+            <img src="https://cdn.dijitalajanslar.com/2016/06/netflix-logo-tasariminda-degisiklik-yapti.png" alt="Netflix Logo" style="max-width: 100%;">
+           
+            <br>
+            <br>
+            <p>Netflix ofrece una amplia variedad de series, películas y documentales.</p>
+
+            <div class="plans">
+                <h3>Planes y Precios</h3>
+                <div class="plan">
+                    <h4>Plan Básico</h4>
+                    <p>Precio: $16.900/mes</p>
+                    <p>Resolución: SD (480p)</p>
+                    <p>Acceso en 1 dispositivo a la vez</p>
+                </div>
+                <div class="plan">
+                    <h4>Plan Estándar</h4>
+                    <p>Precio: $26.900/mes</p>
+                    <p>Resolución: HD (720p)</p>
+                    <p>Acceso en 2 dispositivos a la vez</p>
+                </div>
+                <div class="plan">
+                    <h4>Plan Premium</h4>
+                    <p>Precio: $38.900/mes</p>
+                    <p>Resolución: Ultra HD (4K)</p>
+                    <p>Acceso en 4 dispositivos a la vez</p>
+                </div>
+            </div>
+
+            <button onclick="window.location.href='https://www.netflix.com'">Ir a Netflix</button>
+        </div>
+    </div>
+
+</body>
+</html>
