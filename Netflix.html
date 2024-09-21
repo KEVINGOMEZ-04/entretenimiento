@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            background-color: #121212;
+            background-color: #141414;
             color: #e0e0e0;
             display: flex;
             flex-direction: column;
@@ -21,29 +21,25 @@
         .header {
             text-align: center;
             width: 100%;
-            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #e50914;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .header h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin: 0;
-            font-weight: bold;
-            padding: 20px;
-            background-color: rgba(30, 30, 30, 0.9);
-            border-radius: 10px;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             color: #fff;
         }
 
         .card {
-            background: #1e1e1e;
+            background: #1c1c1c;
             border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            margin: 0px;
-            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            margin: 20px 0;
+            padding: 30px;
             width: 90%;
-            max-width: 900px;
+            max-width: 1000px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -51,83 +47,109 @@
         }
 
         .logo {
-            max-width: 300px;
+            max-width: 250px;
             height: auto;
             margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .description {
-            max-width: 90%;
-            text-align: auto;
-            line-height: 1.6;
+            max-width: 80%;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.1em;
         }
 
         .plans-container {
-            background: #2a2a2a;
+            background: #1f1f1f;
             border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             width: 90%;
-            max-width: 900px;
-            margin-top: 20px;
+            max-width: 1000px;
+            margin-top: 30px;
             text-align: center;
         }
 
         .plans-container h3 {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #e50914;
         }
 
         .plans {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .plan {
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            border: 1px solid #e50914;
-            text-align: left;
+            background: #2c2c2c;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid #e50914;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .plan:hover {
+            transform: translateY(-10px);
+            border-color: #f40612;
         }
 
         .plan h4 {
             margin-top: 0;
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        .plan p {
+            margin: 10px 0;
+            font-size: 1.1em;
+            color: #ddd;
         }
 
         button {
-            padding: 10px 15px;
+            padding: 15px 20px;
             border: none;
             background-color: #e50914;
             color: white;
             cursor: pointer;
             border-radius: 5px;
-            margin-top: 20px;
-            font-size: 16px;
-            transition: background-color 0.3s;
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
             width: 100%;
+            max-width: 300px;
         }
 
         button:hover {
             background-color: #f40612;
+            transform: scale(1.05);
         }
 
-        p {
-            margin: 10px 0;
-        }
-
+        /* Responsive design for small screens */
         @media (max-width: 600px) {
-            .logo {
-                max-width: 100%;
+            .header h1 {
+                font-size: 2em;
             }
 
             .description {
                 max-width: 100%;
+                font-size: 1em;
             }
 
             .plans {
                 grid-template-columns: 1fr;
+            }
+
+            button {
+                width: 100%;
             }
         }
     </style>
@@ -135,7 +157,7 @@
 
 <body>
     <audio autoplay loop>
-    <source src="Undertale OST 023 - Shop - Misaki (youtube).mp3" type="audio/mpeg">
+        <source src="Undertale OST 023 - Shop - Misaki (youtube).mp3" type="audio/mpeg">
     </audio>
 
     <div class="header">
@@ -144,14 +166,15 @@
 
     <div id="content">
         <div class="card">
-            <img class="logo" src="https://cdn.dijitalajanslar.com/2016/06/netflix-logo-tasariminda-degisiklik-yapti.png" alt="Netflix Logo">
+            <img class="logo" src="https://1000marcas.net/wp-content/uploads/2020/01/Netflix-logo.png" alt="Netflix Logo">
             <div class="description">
-                <p>🍿 Contenido Original: Series exclusivas como Stranger Things y The Crown.</p>
-                <p>👨‍👩‍👧‍👦 Para Todos: Opciones para todas las edades, desde comedias hasta dramas.</p>
-                <p>📱 Multidispositivo: Mira en TV, tablet o smartphone, ¡donde quieras!</p>
-                <p>🔄 Recomendaciones: Sugerencias personalizadas basadas en tus gustos.</p>
-                <p>🛠️ Descargas Offline: Ve lo que quieras sin conexión.</p>
-                <p>🌐 Global: Disponible en varios idiomas y países.</p>
+                <p>🎬 Plataforma de Streaming: Accede a miles de películas, series, documentales y contenido original de Netflix. 🎥</p>
+                <p>🍿 Películas y Series: Desde las últimas producciones originales hasta los clásicos más queridos. 🦸‍♂️</p>
+                <p>👨‍👩‍👧‍👦 Contenido Familiar: Opciones para toda la familia, con perfiles infantiles para una experiencia segura. 🧒👴</p>
+                <p>📺 Experiencia Personalizada: Algoritmos avanzados que te recomiendan contenido según tus preferencias. 💡</p>
+                <p>🌍 Acceso Global: Disponible en más de 190 países, con soporte para múltiples idiomas. 🌐</p>
+                <p>🔄 Descargas Offline: Guarda tu contenido favorito para verlo sin conexión. 📱💾</p>
+                <p>🎉 Nuevos Lanzamientos: Estrenos y contenido exclusivo cada mes. 🆕</p>
             </div>
         </div>
 
@@ -160,24 +183,27 @@
             <div class="plans">
                 <div class="plan">
                     <h4>Plan Básico</h4>
-                    <p>Precio: $16.900/mes</p>
-                    <p>Resolución: SD (480p)</p>
-                    <p>Acceso en 1 dispositivo a la vez</p>
+                    <p>✔️ Acceso al catálogo completo de Netflix</p>
+                    <p>📺 Resolución: SD (480p)</p>
+                    <p>📱 Acceso en 1 dispositivo a la vez</p>
+                    <p>💲 Precio: $16.900/mes</p>
                 </div>
                 <div class="plan">
                     <h4>Plan Estándar</h4>
-                    <p>Precio: $26.900/mes</p>
-                    <p>Resolución: HD (720p)</p>
-                    <p>Acceso en 2 dispositivos a la vez</p>
+                    <p>✔️ Acceso al catálogo completo de Netflix</p>
+                    <p>📺 Resolución: Full HD (1080p)</p>
+                    <p>📱 Acceso en 2 dispositivos a la vez</p>
+                    <p>💲 Precio: $26.900/mes</p>
                 </div>
                 <div class="plan">
                     <h4>Plan Premium</h4>
-                    <p>Precio: $38.900/mes</p>
-                    <p>Resolución: Ultra HD (4K)</p>
-                    <p>Acceso en 4 dispositivos a la vez</p>
+                    <p>✔️ Acceso al catálogo completo de Netflix</p>
+                    <p>📺 Resolución: 4K UHD y HDR</p>
+                    <p>📱 Acceso en 4 dispositivos a la vez</p>
+                    <p>💲 Precio: $38.900/mes</p>
                 </div>
             </div>
-            <button onclick="window.location.href='https://www.netflix.com'">Ir a Netflix</button>
+            <button onclick="window.location.href='https://netflix.com/'">Ir a Netflix</button>
         </div>
     </div>
 
